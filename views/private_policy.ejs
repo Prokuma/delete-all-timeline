@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<haead>
+    <title>Delete All Timeline : Introduction</title>
+    <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <style type="text/css">
+        body { padding-bottom: 50px; }
+    </style>
+    <script>!function(d,s,id)
+        {var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?
+                'http':'https';if(!d.getElementById(id)){js=d.createElement(s);
+            js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}
+        (document, 'script', 'twitter-wjs');</script>
+</haead>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Delete All Timeline</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/introduction">소개</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <% if(session){ %>
+                <li><a href="/logout"><%= session %></a></li>
+                <% }else{ %>
+                <li><a href="/login">Login</a></li>
+                <% } %>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Delete All Timeline</h1>
+        <p>당신의 모든 포스팅을 모두 지웁니다</p>
+        <p><a class="btn btn-primary btn-lg" href="/introduction" role="button">더보기...</a></p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>개인정보 수집 및 이용에 대한 안내</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="caption">
+                <h3>수집항목 및 이용목적</h3>
+                <p>이름 : 로그인 시 우측 상단에 이름 표기</p>
+                <p>타임라인에 개재된 글 : 삭제를 위한 POST ID 수집 및 삭제전에 사용자에게 보여주는 용도</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="caption">
+                <h3>수집항목에 대한 보관</h3>
+                <p>이름 : 세션 만료 또는 로그아웃 기간까지</p>
+                <p>타임라인에 개재된 글 : 보관하지 않음</p>
+            </div>
+        </div>
+</div>
+</body>
+</html>
